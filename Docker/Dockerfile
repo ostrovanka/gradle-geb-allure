@@ -6,6 +6,6 @@ RUN mkdir -p /opt/project && \
 FROM gradle:jdk8-hotspot AS execution-stage
 COPY --from=clone-stage /opt/project .
 RUN chmod +x start.sh
-ENTRYPOINT ["./start.sh", "remoteChrome"]
+ENTRYPOINT ["ls", "-l"]
 
 
