@@ -1,0 +1,23 @@
+version: "3"
+services:
+  tests:
+    image: aostrovskaya/geb-allure-tests:custom
+    depends_on:
+      - zalenium
+    network_mode: host
+    volumes:
+      - /tmp/allure-report:/home/gradle/build/reports/allure-report
+  zalenium:
+    image: dosel/zalenium
+    stdin_open: true
+    tty: true
+    environment:
+      - PULL_SELENIUM_IMAGE=true
+    command: start
+    expose:
+      - "4444"
+    ports:
+      - "4444:4444"
+    volumes:
+      - /tmp/videos:/home/seluser/videos
+      - /var/run/docker.sock:/var/run/docker.sock
