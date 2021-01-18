@@ -1,7 +1,7 @@
 version: "3"
 services:
   tests:
-    image: aostrovskaya/geb-allure-tests:custom
+    image: aostrovskaya/geb-allure-tests:latest
     depends_on:
       - zalenium
     network_mode: host
