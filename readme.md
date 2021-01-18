@@ -22,4 +22,3 @@ TEST_BROWSER - browser in which tests will be executed
 ## Docker
 ```/Docker/docker-compose.yaml``` file is available - it will mount 2 containers: one with zalenium (tool akin to Selenium grid) and second with tests which will be executed using zalenium.
 
-Image with tests is stored in [Dokerhub](https://hub.docker.com/repository/docker/aostrovskaya/geb-allure-tests) 
