@@ -1,12 +1,12 @@
 version: "3"
 services:
   tests:
-    image: aostrovskaya/geb-allure-tests:latest
+    image: aostrovskaya/gradle-geb-allure:latest
     depends_on:
       - zalenium
     network_mode: host
     volumes:
-      - /tmp/allure-report:/home/gradle/build/reports/allure-report
+      - /tmp/allure-report:/temp
   zalenium:
     image: dosel/zalenium
     stdin_open: true
