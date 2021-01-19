@@ -1,6 +1,6 @@
 #!/bin/bash
 
-report_dir=$(date +'%Y_%m_%d_%H-%m')
+report_dir=$(date +'%Y_%m_%d_%H-%m-%S')
 
 ## execute tests
 ./gradlew testParam -DTEST_BROWSER=$1
